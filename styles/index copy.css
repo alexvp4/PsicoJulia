@@ -1,0 +1,726 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+:root {
+  --bg-principal: #d3e0ea;
+  --bg-sec: #f5f5f5e6;
+  --font-dark: #45474b;
+  --font-white: #f7f7f7;
+  --width-section: 65%;
+  --margin-bottom: 1em;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-weight: 400;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-image: url("../assets/bg-d3e0ea-4.png");
+}
+
+main {
+  flex-grow: 1;
+  margin-bottom: var(--margin-bottom);
+}
+
+header,
+footer {
+  padding: 20px;
+  margin: 20px;
+}
+
+header {
+  color: var(--font-dark);
+  font-size: larger;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar__links {
+  position: absolute;
+  left: 50%; /* Move o elemento para o meio */
+  transform: translateX(-50%); /* Centraliza o elemento */
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.navbar__dummy {
+  display: flex;
+  align-items: center;
+  gap: 10em;
+}
+
+header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+header nav ul li {
+  float: left;
+  margin-right: 2px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  margin-right: 0.8em;
+  border-bottom: 1px solid rgba(44, 45, 42, 0.25);
+  transition: all 0.3s ease; /* Adiciona transição para o efeito de hover */
+}
+
+header nav ul li a:hover {
+  color: #fe9b3e;
+  border-bottom: 2px solid #b0d3e6;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.btn-agendar {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(
+    to right top,
+    #198754,
+    #008c77,
+    #008f97,
+    #008fb0,
+    #008dbf
+  );
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s, transform 0.2s; /* Transição suave para efeitos */
+}
+
+.btn-agendar:hover {
+  transform: translateY(-2px); /* Efeito de "levantar" ligeiramente o botão */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.introduction,
+.treatment,
+.aboutMe,
+.approaching,
+.faq {
+  display: flex;
+  align-items: flex-start;
+  background: var(--bg-sec);
+  color: var(--font-dark);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  padding: 2em;
+  width: var(--width-section);
+  margin: 0 auto;
+  margin-bottom: 1.5em;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.introduction__title h2 {
+  text-align: center;
+}
+
+.introduction__content-wrapper {
+  display: flex;
+  width: 100%;
+  margin-bottom: var(--margin-bottom);
+}
+
+.introduction__text {
+  flex: 1;
+  margin-right: 3em;
+  margin-left: 3em;
+}
+
+.introduction img {
+  flex: 0 0 auto;
+  order: 2;
+  flex-shrink: 0; /* Previne a imagem de encolher */
+  width: 100%;
+  max-width: 40%; /* Máxima largura em desktop */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-left: 1em;
+  border-radius: 10px;
+  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+}
+
+.introduction__quote:hover {
+  text-decoration: underline;
+  transition: text-decoration 0.3s ease-in-out;
+}
+
+.introduction__title h2,
+.introduction__main__text h4,
+.introduction__quote h4,
+.introduction__author h5 {
+  text-align: justify;
+}
+
+.introduction__main__text {
+  margin-bottom: 2em;
+}
+
+.introduction__main__text span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.introduction__quote h4 {
+  font-style: italic;
+}
+
+.introduction__author h5 {
+  text-align: center;
+  width: 100%;
+}
+
+.treatment {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.treatment__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--margin-bottom);
+}
+
+.treatment__content img {
+  max-width: 12%;
+  height: auto;
+  text-align: center;
+  padding: 0px;
+  margin: 0 0 0 0;
+}
+
+.treatment__main__text {
+  flex: 2;
+}
+
+.treatment__main__text ul {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.treatment__main__text li {
+  margin: 0px 0;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  background-color: #fe9b3e1c;
+  width: 102%;
+}
+
+.treatment__main__text li:hover {
+  background-color: #fe9b3ecb;
+  color: #000000ce;
+}
+
+.treatment .cntr {
+  margin-right: 1em;
+  max-width: 40%;
+}
+
+.aboutMe {
+  flex-direction: column;
+}
+
+.aboutMe__content {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--margin-bottom);
+}
+
+.aboutMe__title {
+  text-align: center;
+  width: 100%;
+}
+
+.aboutMe__title h2 {
+  display: inline-block; /* Permite centralização horizontal do elemento h2 */
+}
+
+.aboutMe__content img {
+  max-width: 50%;
+  height: 50vh;
+  border-radius: 10px;
+  margin-right: 1em;
+}
+
+.aboutMe__text {
+  max-width: 65%;
+  text-align: justify;
+}
+
+.aboutMe__main__text {
+  margin-bottom: 5em;
+  margin: 1em;
+}
+
+.aboutMe__main__text h3 {
+  font-style: oblique;
+}
+
+.aboutMe__secundary__text {
+  text-align: center;
+}
+
+.aboutMe__secundary__text h4 {
+  margin-bottom: 3em;
+  text-align: justify;
+  margin: 1em;
+}
+
+.aboutMe__secundary__text a {
+  text-decoration: none;
+  color: #222753;
+}
+
+.aboutMe__secundary__text a:hover {
+  text-decoration: underline;
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.faq__question {
+  display: block;
+  cursor: pointer;
+  padding: 0.2%;
+  border-radius: 4px;
+  background-color: #fe9b3e1c;
+  text-align: center;
+  margin: 1em 0;
+}
+
+.faq__answer {
+  display: none;
+  text-align: justify;
+  padding: 0 0.4%;
+}
+
+.faq__answer a {
+  text-decoration: none;
+}
+
+.faq h2 {
+  font-weight: 600;
+  text-align: center;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-style: oblique;
+  margin-bottom: var(--margin-bottom);
+}
+
+/* ---------------------footer--------------------- */
+
+footer {
+  margin: 0 0 0 0;
+  background-color: #363635;
+  color: #eeeff1;
+  padding: 1em;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.footer-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.columns {
+  width: 25%;
+}
+
+.columns h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #ebe3d5;
+}
+
+.columns ul {
+  list-style: none;
+  padding: 0;
+}
+
+.columns ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.columns ul li a:hover {
+  text-decoration: underline;
+}
+
+.dev {
+  padding: 0px;
+  margin: 0 0 0 0;
+}
+
+.dev h6 {
+  margin: 20px 0 0 0;
+  color: #b3b3b4;
+}
+
+.dev a {
+  margin: 0 5px; /* Espaço entre os ícones e o texto */
+  color: inherit; /* Herda a cor do texto do elemento pai */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  transition: color 0.3s ease; /* Transição suave para mudança de cor */
+}
+
+.dev a:hover {
+  color: #fe9b3e;
+}
+
+.dev svg {
+  fill: white;
+  transition: fill 0.3s ease;
+}
+
+.dev svg:hover {
+  fill: #fe9b3e;
+}
+
+/* ---------------------abordagem--------------------- */
+
+.approaching {
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
+
+.picture img {
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.approaching img {
+  margin: 0 0 0 0;
+}
+
+.signature {
+  text-align: center;
+  color: #000000;
+}
+
+/* ---------------------agendamentos--------------------- */
+
+.appointments__question {
+  text-align: center;
+}
+
+/* ---------------------links--------------------- */
+
+.main__links {
+  display: block;
+  margin: 2em;
+}
+
+.mylinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mylinks a {
+  text-decoration: none;
+}
+
+.mylinks img {
+  margin: 1em 1em 2em;
+}
+
+.btn-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-sec);
+  color: var(--font-dark);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  padding: 10px 20px;
+  width: 360px;
+  height: 50px;
+  margin-bottom: 1.2em;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s; /* Efeito suave ao passar o mouse */
+}
+
+.btn-links:hover {
+  transform: scale(1.05); /* Ligeiro aumento ao passar o mouse */
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 3px 6px 0px; /* Sombra mais intensa ao passar o mouse */
+}
+
+.btn-links svg {
+  margin-right: 10px;
+}
+
+.site:hover {
+  background-color: #0766ad;
+  color: #ffffff;
+}
+
+.whatsapp:hover {
+  background-color: #198754;
+  color: #ffffff;
+}
+
+.inst:hover {
+  background: linear-gradient(
+    to right,
+    #feda75,
+    #ffa26c,
+    #ff6c8a,
+    #d152b6,
+    #4f5ad5d0
+  );
+  color: #ffffff;
+}
+
+.mail:hover {
+  background-color: #0766ad;
+  color: #ffffff;
+}
+
+.btn-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.texto-hover {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-links:hover .texto-original {
+  display: none;
+}
+
+.btn-links:hover .texto-hover {
+  display: block;
+  position: static;
+  transform: none;
+}
+
+.lattes:hover {
+  background-color: #0766ad;
+  color: #ffffff;
+}
+
+/* ---------------------media query--------------------- */
+
+@media (max-width: 1080px) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden; /* Impede rolagem horizontal */
+  }
+
+  .navbar {
+    flex-direction: column; /* Organiza logo e links em coluna */
+    align-items: center; /* Centraliza os itens na coluna */
+    font-size: medium;
+  }
+
+  .navbar img {
+    margin-bottom: 5px;
+  }
+
+  .navbar__links {
+    position: relative;
+    order: 2; /* Coloca os links abaixo do logo */
+    width: 100%;
+    justify-content: center;
+  }
+
+  header {
+    margin: 0;
+    padding: 1em;
+  }
+
+  header nav ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul li {
+    margin: 5px 0;
+  }
+
+  .navbar__links a {
+    margin: 0 0 0 0;
+  }
+
+  .picture {
+    margin-top: 1em;
+  }
+
+  .introduction,
+  .treatment,
+  .aboutMe,
+  .approaching,
+  .faq {
+    padding: 10px;
+    margin: 0;
+    width: 88%;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    font-weight: 100;
+    font-size: small;
+  }
+
+  .introduction img {
+    display: none;
+  }
+
+  .introduction__title h2 {
+    text-align: center;
+  }
+
+  .introduction__text {
+    margin: 0 1em;
+  }
+
+  .treatment__content {
+    font-size: 8px;
+  }
+
+  .treatment img {
+    display: none;
+  }
+
+  .aboutMe__content {
+    display: block;
+    text-align: center;
+    margin-bottom: var(--margin-bottom);
+  }
+
+  .aboutMe__content img {
+    max-width: 55%;
+    height: auto; /* Mantém proporção da imagem */
+    border-radius: 10px;
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    display: block; /* Garante que a imagem seja um bloco próprio */
+  }
+
+  .aboutMe__text {
+    max-width: 100%;
+    text-align: justify;
+    margin-top: 20px;
+  }
+
+  .aboutMe__main__text {
+    margin-bottom: 1em;
+  }
+
+  .aboutMe__secundary__text h4 {
+    margin-top: 2em;
+  }
+
+  .details {
+    margin: 0px 10px;
+  }
+
+  .details h4 {
+    margin-top: 0;
+    margin-bottom: 2em;
+    font-size: 10px;
+  }
+
+  footer {
+    font-weight: lighter;
+    font-size: 8px;
+  }
+
+  .footer-columns {
+    margin-right: 2em;
+  }
+
+  .btn-agendar {
+    padding: 8px 16px;
+    font-size: 18px;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.2s; /* Transição suave para efeitos */
+  }
+
+  .btn-agendar span {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .btn-links {
+    width: 304px;
+  }
+}
+
+@media (max-width: 288px) {
+  .btn-links {
+    width: 240px;
+  }
+}
